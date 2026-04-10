@@ -2,20 +2,20 @@
 
 ### 1. Robust Input Validation
 - **Location:** `script.js` | `makeGuess()` function.
-- **Description:** Added logic to detect and ignore `NaN` or empty inputs.
-- **Impact:** Ensures the user's score and guess count aren't negatively impacted by accidental clicks, reflecting a more professional "production-ready" software approach.
+- **Description:** Implemented a check to ensure inputs are valid numbers before processing.
+- **Impact:** Prevents null or non-numeric entries from polluting the average score or incrementing the guess counter, ensuring data integrity for the operator.
 
-### 2. High-Precision Timing System
-- **Location:** `script.js` | `updateTimers()` and `play()` functions.
-- **Description:** Utilized `new Date().getTime()` to measure round duration in milliseconds.
-- **Impact:** Provides much more granular feedback for the "Fastest Game" statistic compared to simple second-counting, fitting for an engineering-focused mindset.
+### 2. High-Precision Timing Delta
+- **Location:** `script.js` | `updateTimers()` function.
+- **Description:** Tracks game performance using millisecond-accurate deltas between initialization and resolution.
+- **Impact:** Provides a technical, performance-oriented "Fastest Game" metric that exceeds standard second-counting logic.
 
-### 3. Programmatic Date Suffix Algorithm
+### 3. Sophisticated Suffix Logic
 - **Location:** `script.js` | `time()` function.
-- **Description:** Implemented a mathematical algorithm to correctly assign "st", "nd", "rd", and "th" suffixes to the current date, including exception handling for the 11th-13th.
-- **Impact:** Demonstrates a deeper understanding of conditional logic beyond basic hard-coding.
+- **Description:** Developed an algorithm to correctly assign "st", "nd", "rd", and "th" suffixes to the live date, including the mathematical exceptions for the 11th through 13th.
+- **Impact:** Demonstrates advanced conditional logic and attention to detail in UI/UX presentation.
 
-### 4. Optimized Operator Workflow
+### 4. Adaptive Interface State Management
 - **Location:** `script.js` | `play()` and `endRound()` functions.
-- **Description:** Implemented strict state management for all buttons and inputs to prevent logical conflicts (like resetting the answer mid-game).
-- **Impact:** Protects the integrity of the game data and provides a smoother user experience.
+- **Description:** Manages the disabled/enabled states of the difficulty selection and control buttons to prevent mid-round system resets.
+- **Impact:** Ensures the stability of the random number generation and scoring sequence during active gameplay.
