@@ -1,35 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>JavaScript Number Guessing Game</title>
-    <script src="script.js" defer></script>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS++ Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <p id="date"></p>
-
-    <h3>Level</h3>
-    <input type="radio" name="level" id="e" value="3" checked><label for="e">Easy</label>
-    <input type="radio" name="level" id="m" value="10"><label for="m">Medium</label>
-    <input type="radio" name="level" id="h" value="100"><label for="h">Hard</label>
+    
+    <div>
+        <input type="radio" name="level" id="e" value="3" checked> Easy (1-3)
+        <input type="radio" name="level" id="m" value="10"> Medium (1-10)
+        <input type="radio" name="level" id="h" value="100"> Hard (1-100)
+    </div>
 
     <button id="playBtn">Play</button>
-
-    <h3 id="msg">Select a Level</h3>
-    <input type="text" id="guess">
+    <hr>
+    
+    <h3 id="msg">Press Play to Start!</h3>
+    
+    <input type="number" id="guess" placeholder="Enter guess">
     <button id="guessBtn" disabled>Guess</button>
     <button id="giveUpBtn" disabled>Give Up</button>
 
-    <h3>Stats</h3>
-    <p id="wins">Total wins: 0</p>
-    <p id="avgScore">Average Score: </p>
-    <p id="fastest">Fastest Game: </p>
-    <p id="avgTime">Average Time: </p>
+    <hr>
+    <p>Total Wins: <span id="wins">0</span></p>
+    <p>Average Score: <span id="avgScore">0</span></p>
+    <p>Fastest Game (ms): <span id="fastest">0</span></p>
+    <p>Average Time (ms): <span id="avgTime">0</span></p>
 
-    <h3>Leaderboard</h3>
+    <h4>Leaderboard (Top 3)</h4>
     <ol>
-      <li name="leaderboard">100</li>
-      <li name="leaderboard">100</li>
-      <li name="leaderboard">100</li>
+        <li name="leaderboard">--</li>
+        <li name="leaderboard">--</li>
+        <li name="leaderboard">--</li>
     </ol>
-  </body>
+
+    <script src="script.js"></script>
+</body>
 </html>
