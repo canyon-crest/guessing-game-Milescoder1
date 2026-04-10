@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>CS++ Guessing Game</title>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <p id="date"></p>
@@ -13,13 +12,14 @@
         <input type="radio" name="level" id="m" value="10"> Medium (1-10)
         <input type="radio" name="level" id="h" value="100"> Hard (1-100)
     </div>
+    <br>
 
     <button id="playBtn">Play</button>
     <hr>
     
     <h3 id="msg">Press Play to Start!</h3>
     
-    <input type="number" id="guess" id="guess" placeholder="Enter guess">
+    <input type="number" id="guess" placeholder="Enter guess">
     <button id="guessBtn" disabled>Guess</button>
     <button id="giveUpBtn" disabled>Give Up</button>
 
@@ -30,7 +30,7 @@
     <p>Average Time (ms): <span id="avgTime">0</span></p>
 
     <h4>Leaderboard (Top 3)</h4>
-    <ol id="leaderboardList">
+    <ol>
         <li name="leaderboard">--</li>
         <li name="leaderboard">--</li>
         <li name="leaderboard">--</li>
